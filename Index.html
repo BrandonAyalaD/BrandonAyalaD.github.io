@@ -8,17 +8,11 @@
 </head>
 <body>
 
-    <div class="space-background">
-    <div class="nebula nebula-purple"></div>
-    <div class="nebula nebula-blue"></div>
-    <div class="star star-sm"></div>
-    <div class="star star-md"></div>
-    <div class="star star-lg"></div>
-</div>
+    <div class="background-soft"></div>
 
     <header>
         <nav>
-            <a href="index.html">Inicio</a>
+            <a href="index.html" class="nav-logo">Inicio</a>
         </nav>
     </header>
 
@@ -38,20 +32,30 @@
                 </div>
             </div>
         </section>
+        <section class="about-section">
+    <div class="about-container">
+        <div class="about-image">
+            <div class="photo-placeholder">
+    <img src="assets/img/379875630_7121242484593662_1143899109945187381_n.jpg" alt="Foto de Brandon" class="profile-img">
+    </div>
+        </div>
+
+        <div class="about-text">
+            <h2>Soy Brandon Ayala! <span class="job-title">| Marketing Automation Specialist</span></h2>
+            <p>
+                Soy alguien a quien le gusta entender las cosas antes de construirlas.
+                Me tomo el tiempo para pensar, cuestionar y explorar ideas a fondo — no para complicarlas, sino para hacerlas reales y útiles.
+                Lo que creo nace de la curiosidad, la intención y la necesidad de convertir ideas en algo que realmente funcione. <br><br>Muchas de mis mejores ideas han pasado por una pausa, una mirada al vacío…
+                y una gata caminando sobre el teclado.
+            </p>
+        </div>
+    </div>
+</section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Mi Página Web</p>
+    <footer class="main-footer">
+        <p>&copy; 2025 — Hecho con propósito</p>
     </footer>
-
-    <svg style="display: none;">
-        <filter id="wave-filter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="3" seed="1">
-                <animate attributeName="baseFrequency" dur="30s" values="0.01 0.01;0.015 0.02;0.01 0.01" repeatCount="indefinite" />
-            </feTurbulence>
-            <feDisplacementMap in="SourceGraphic" scale="30" />
-        </filter>
-    </svg>
 
 </body>
 </html>
