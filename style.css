@@ -42,7 +42,56 @@ header {
     opacity: 0.6;
     transition: 0.3s;
 }
+/* 2.5. SECCIÓN Think Deep. Create Real. */
 
+/* Recuperando la caída de letras */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px); /* Empiezan arriba */
+    animation: dropLetter 0.6s ease forwards;
+}
+
+.space {
+    display: inline-block;
+    width: 10px; /* Espacio entre palabras */
+}
+
+@keyframes dropLetter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delays precisos para "Think deep. Create real." */
+.letter:nth-child(1)  { animation-delay: 0.1s; } /* T */
+.letter:nth-child(2)  { animation-delay: 0.2s; } /* h */
+.letter:nth-child(3)  { animation-delay: 0.3s; } /* i */
+.letter:nth-child(4)  { animation-delay: 0.4s; } /* n */
+.letter:nth-child(5)  { animation-delay: 0.5s; } /* k */
+
+/* El espacio es el 6, el siguiente es el 7 */
+.letter:nth-child(7)  { animation-delay: 0.6s; } /* d */
+.letter:nth-child(8)  { animation-delay: 0.7s; } /* e */
+.letter:nth-child(9)  { animation-delay: 0.8s; } /* e */
+.letter:nth-child(10) { animation-delay: 0.9s; } /* p */
+.letter:nth-child(11) { animation-delay: 1.0s; } /* . (Punto de deep) */
+
+/* Los espacios son 12, el siguiente es 13 */
+.letter:nth-child(13) { animation-delay: 1.1s; } /* C */
+.letter:nth-child(14) { animation-delay: 1.2s; } /* r */
+.letter:nth-child(15) { animation-delay: 1.3s; } /* e */
+.letter:nth-child(16) { animation-delay: 1.4s; } /* a */
+.letter:nth-child(17) { animation-delay: 1.5s; } /* t */
+.letter:nth-child(18) { animation-delay: 1.6s; } /* e */
+
+/* El espacio es 19, el siguiente es 20 */
+.letter:nth-child(20) { animation-delay: 1.7s; } /* r */
+.letter:nth-child(21) { animation-delay: 1.8s; } /* e */
+.letter:nth-child(22) { animation-delay: 1.9s; } /* a */
+.letter:nth-child(23) { animation-delay: 2.0s; } /* l */
+.letter:nth-child(24) { animation-delay: 2.1s; } /* . (Punto final) */
 /* 3. SECCIÓN HERO */
 .hero {
     display: flex;
@@ -75,6 +124,16 @@ header {
 }
 .profile-img { width: 100%; height: 100%; object-fit: cover; }
 .about-text { flex: 2; min-width: 300px; }
+
+.job-title {
+    font-size: 11px;       /* Tamaño solicitado */
+    color: var(--accent-blue); /* El azul que estamos usando en la línea de tiempo */
+    font-weight: 500;      /* Un poco de grosor para que sea legible */
+    text-transform: uppercase; /* Opcional: en mayúsculas se ve muy profesional a ese tamaño */
+    letter-spacing: 1px;   /* Espaciado entre letras para mejorar la lectura */
+    margin-left: 10px;     /* Separación respecto al nombre */
+    vertical-align: middle; /* Para que se alinee bien con el texto de al lado */
+}
 
 /* 5. SECCIÓN TIMELINE - BASE (MÓVIL PRIMERO) */
 .timeline-section { padding: 60px 15px; }
@@ -147,4 +206,111 @@ header {
 }
 
 /* 7. FOOTER */
-.main-footer { padding: 40px 0; text-align: center; color: var(--text-gray); background: white; }
+.main-footer {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-content p {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--accent-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 0.7;
+}
+
+.copyright {
+    font-size: 0.8rem !important;
+    color: var(--text-gray) !important;
+}
+
+/* --- SECCIÓN SKILLS --- */
+.skills-section {
+    padding: 100px 20px;
+    background-color: #ffffff; /* Contraste con el fondo gris de la trayectoria */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: #f8fafc;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Píldoras de tecnología (Tags) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tags span {
+    background: white;
+    color: var(--accent-blue);
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+}
+
+/* Responsivo para celulares */
+@media screen and (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+}
